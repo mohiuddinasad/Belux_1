@@ -1,0 +1,293 @@
+/*----------------------------------[Table of contents]----------------------------------
+# newsletter-modal css
+# offer-text css
+# home-slider css
+# category-slider css
+# service css
+# testimonial css
+# newsletter-area css
+---------------------------------------------------------------------------------------*/
+
+/************************************* newsletter-modal css start *************************************/
+/*====================================
+    newsletter-modal css
+====================================*/
+@media (min-width: 768px) {
+    .newsletter-modal .newsletter-info .newsletter-content .newsletter-form .news-wrap input {
+        border-radius: var(--border-radius) 0px 0px var(--border-radius);
+    }
+    .newsletter-modal .newsletter-info .newsletter-content .newsletter-form .news-wrap button {
+        border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+    }
+}
+/************************************* newsletter-modal css end *************************************/
+
+/************************************* offer-text css start *************************************/
+/*====================================
+    offer-text css
+====================================*/
+.offer-text a {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+.offer-text a:hover {
+    opacity: 0.7;
+}
+
+/*====================================
+    offer-text-marquee css
+====================================*/
+.offer-text .offer-text-marquee .offer-text-marquee-row {
+    -webkit-animation: slide-left 20s linear infinite;
+    animation: slide-left 20s linear infinite;
+}
+.offer-text:hover .offer-text-marquee .offer-text-marquee-row,
+.offer-text:focus .offer-text-marquee .offer-text-marquee-row {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused
+}
+/************************************* offer-text css end *************************************/
+
+/************************************* home-slider css start *************************************/
+/*====================================
+    home-slider swiper css
+====================================*/
+.slider-content .home-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+
+/*====================================
+    slider-content css
+====================================*/
+.slider-content .home-slider h2 {
+    line-height: 1.06;
+}
+
+/*====================================
+    slider-content transition css
+====================================*/
+.slider-content .home-slider.swiper .swiper-slide .slider-image h2,
+.slider-content .home-slider.swiper .swiper-slide .slider-image a {
+    opacity: 0;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image h2,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image a {
+    opacity: 1;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image h2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image a {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+}
+
+/*====================================
+    slider-navigation css
+====================================*/
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button {
+    color: var(--primary-font-color);
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+    left: 5px;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+    right: 5px;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button:hover {
+    color: var(--extra-font-color);
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--primary-font-color);
+    z-index: -1;
+    opacity: 0.1;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button:hover::after {
+    opacity: 1;
+}
+@media (min-width: 1400px) {
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+        left: 10px;
+    }
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+        right: 10px;
+    }
+}
+@media (min-width: 1600px) {
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+        left: 30px;
+    }
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+        right: 30px;
+    }
+}
+
+/*====================================
+    slider-dot css
+====================================*/
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination {
+    width: unset;
+    position: unset;
+    margin: -5px 0px 0px -5px;
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-font-color);
+    margin: 5px 0px 0px 5px;
+    opacity: 0.1;
+    border: 1px solid var(--primary-font-color);
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet:hover,
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+/************************************* home-slider css end *************************************/
+
+/************************************* category-slider css start *************************************/
+/*====================================
+    category-slider swiper css
+====================================*/
+.category-slider .cat-wrap {
+    margin: 0px -7.5px;
+}
+.category-slider .cat-wrap .cat-slider.swiper {
+    padding: 0px 7.5px;
+}
+.category-slider .cat-wrap .cat-slider.swiper .swiper-slide {
+    padding: 15px 0px;
+}
+.category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .category-slider .cat-wrap {
+        margin: 0px -15px;
+    }
+    .category-slider .cat-wrap .cat-slider.swiper {
+        padding: 0px 15px;
+    }
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+
+/*====================================
+    cat-block css
+====================================*/
+.category-slider .cat-slider .cat-block .cat-content span.cat-bgimg {
+    width: 136px;
+}
+.category-slider .cat-slider .cat-block .cat-content span.cat-img {
+    width: 160px;
+}
+@media (min-width: 1200px) {
+    .category-slider .cat-slider .cat-block .cat-content span.cat-bgimg {
+        width: 168px;
+    }
+    .category-slider .cat-slider .cat-block .cat-content span.cat-img {
+        width: 184px;
+    }
+}
+@media (min-width: 1400px) {
+    .category-slider .cat-slider .cat-block .cat-content span.cat-bgimg {
+        width: 184px;
+    }
+    .category-slider .cat-slider .cat-block .cat-content span.cat-img {
+        width: 224px;
+    }
+}
+/************************************* category-slider css end *************************************/
+
+/************************************* service css start *************************************/
+/*====================================
+    service-content css
+====================================*/
+.service-area .service-content span.service-img img {
+    -webkit-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+.service-area .service-content:hover span.service-img img {
+    transform: scaleX(-1);
+}
+/************************************* service css end *************************************/
+
+/************************************* testimonial css start *************************************/
+/*====================================
+    testimonial slider-swiper css
+====================================*/
+.testimonial .testi-wrap {
+    margin: 0px -7.5px;
+}
+.testimonial .testi-wrap .testi-slider.swiper {
+    padding: 0px 7.5px;
+}
+.testimonial .testi-wrap .testi-slider.swiper .swiper-slide {
+    padding: 15px 0px;
+}
+.testimonial .testi-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .testimonial .testi-wrap {
+        margin: 0px -15px;
+    }
+    .testimonial .testi-wrap .testi-slider.swiper {
+        padding: 0px 15px;
+    }
+    .testimonial .testi-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .testimonial .testi-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+/************************************* testimonial css end *************************************/
+
+/************************************* newsletter-area css start *************************************/
+/*====================================
+    newsletter-title css
+====================================*/
+.newsletter-area .newsletter-form .section-capture .section-title h2.section-heading {
+    color: var(--primary-font-color);
+}
+
+/*====================================
+    newsletter-form css
+====================================*/
+@media (min-width: 768px) {
+    .newsletter-area .newsletter-form form.news-form .news-wrap input {
+        border-radius: var(--border-radius) 0px 0px var(--border-radius);
+    }
+    .newsletter-area .newsletter-form form.news-form .news-wrap button {
+        border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+    }
+}
+/************************************* newsletter-area css end *************************************/
